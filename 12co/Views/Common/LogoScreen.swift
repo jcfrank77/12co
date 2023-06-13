@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct LogoScreen: View {
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         ZStack {
-            Image("appstore")
+            Image(colorScheme == .dark ? "appstoreDark" : "appstore")
                 .resizeableFit()
                 .frame(width: 240)
         }
