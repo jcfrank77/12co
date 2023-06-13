@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-
 extension Image {
     func resizeableFit() -> some View {
-        resizable()
-        .aspectRatio(contentMode: .fit)
+        self.resizable()
+            .aspectRatio(contentMode: .fit)
     }
 }

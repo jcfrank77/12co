@@ -1,18 +1,9 @@
 {
   "colors" : [
     {
-      "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
       "color" : {
         "platform" : "universal",
-        "reference" : "labelColor"
+        "reference" : "systemGrayColor"
       },
       "idiom" : "universal"
     },
@@ -25,7 +16,7 @@
       ],
       "color" : {
         "platform" : "universal",
-        "reference" : "labelColor"
+        "reference" : "systemGrayColor"
       },
       "idiom" : "universal"
     }

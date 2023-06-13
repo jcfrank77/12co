@@ -7,12 +7,6 @@
 
 import Foundation
 
+protocol NetworkProvider {}
 
-
-protocol NetworkProvider {
-    
-}
-
-class NetworkService: NetworkProvider {
-    
-}
+class NetworkService: NetworkProvider {}
