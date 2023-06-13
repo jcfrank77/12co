@@ -54,10 +54,4 @@ extension View {
             .foregroundColor(color)
             .padding(10)
     }
-
-    public func alwaysPopover<Content>(isPresented: Binding<Bool>,
-                                       @ViewBuilder content: @escaping () -> Content) -> some View where Content: View
-    {
-        modifier(AlwaysPopoverModifier(isPresented: isPresented, contentBlock: content))
-    }
 }
