@@ -36,3 +36,13 @@ struct EmailValidator: Validator {
         self.isValid = predicate.evaluate(with: string)
     }
 }
+
+struct PhoneNumberValidator: Validator {
+    let isValid: Bool
+
+    init(_ string: String) {
+        let regex = " ^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        self.isValid = predicate.evaluate(with: string)
+    }
+}

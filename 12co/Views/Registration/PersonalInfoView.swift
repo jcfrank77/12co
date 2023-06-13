@@ -111,7 +111,7 @@ struct PersonalInfoView: View {
             NavigationLink(destination: MobileNumberView().onAppear {
                 self.viewModel.savePersonalInfo()
             }) {
-                Text("continue")
+                Text("Continue")
             }
             .buttonStyle(PrimaryButtonStyle())
             .padding(.top, Spacing.med)

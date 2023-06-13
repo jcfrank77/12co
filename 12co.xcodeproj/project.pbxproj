@@ -35,6 +35,8 @@
 		5D286CA82A372EB2009EB8F4 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5D286CA72A372EB2009EB8F4 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		5D286CAA2A372EB2009EB8F4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5D286CA92A372EB2009EB8F4 /* FirebaseAuth */; };
 		5D286CAC2A372EB2009EB8F4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5D286CAB2A372EB2009EB8F4 /* FirebaseCrashlytics */; };
+		5D55A1E62A3899C1001F56B4 /* CountryPhoneCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A1E52A3899C0001F56B4 /* CountryPhoneCodes.swift */; };
+		5D55A1E82A38A793001F56B4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A1E72A38A793001F56B4 /* Utilities.swift */; };
 		5DB6339F2A3779F5001F7D61 /* PersonalInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6339E2A3779F5001F7D61 /* PersonalInfoViewModel.swift */; };
 		5DB633A22A38647E001F7D61 /* NavigationTransitions in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB633A12A38647E001F7D61 /* NavigationTransitions */; };
 		5DB633A42A386D03001F7D61 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB633A32A386D03001F7D61 /* Validators.swift */; };
@@ -90,6 +92,9 @@
 		5D286C8D2A372AAF009EB8F4 /* 12coUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12coUITests.swift; sourceTree = "<group>"; };
 		5D286C8F2A372AAF009EB8F4 /* 12coUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12coUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5D286CA42A372E54009EB8F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D55A1E42A38976C001F56B4 /* -2co-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-2co-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5D55A1E52A3899C0001F56B4 /* CountryPhoneCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPhoneCodes.swift; sourceTree = "<group>"; };
+		5D55A1E72A38A793001F56B4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5DB6339E2A3779F5001F7D61 /* PersonalInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewModel.swift; sourceTree = "<group>"; };
 		5DB633A32A386D03001F7D61 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		5DB633A52A386D82001F7D61 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -153,8 +158,8 @@
 				5D09A6DA2A375E8300613819 /* Color+Ext.swift */,
 				5D09A6D12A375AA600613819 /* Font+Ext.swift */,
 				5D2541022A373CF8007F4BE5 /* Image+Ext.swift */,
-				5D2540FE2A3736D5007F4BE5 /* View+Ext.swift */,
 				5DB633A52A386D82001F7D61 /* String+Ext.swift */,
+				5D2540FE2A3736D5007F4BE5 /* View+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 		5D286C702A372AAE009EB8F4 /* 12co */ = {
 			isa = PBXGroup;
 			children = (
+				5D55A1E42A38976C001F56B4 /* -2co-Info.plist */,
 				5D286C772A372AAF009EB8F4 /* 12co.entitlements */,
 				5D286C712A372AAE009EB8F4 /* 12coApp.swift */,
 				5D286CA22A372BDA009EB8F4 /* Models */,
@@ -241,12 +247,14 @@
 		5D286C9F2A372BC0009EB8F4 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				5D09A6E42A37732E00613819 /* Styles */,
 				5D286CA42A372E54009EB8F4 /* GoogleService-Info.plist */,
+				5D55A1E52A3899C0001F56B4 /* CountryPhoneCodes.swift */,
 				5D09A6D62A375CDB00613819 /* Spacing.swift */,
+				5D55A1E72A38A793001F56B4 /* Utilities.swift */,
+				5DB633A32A386D03001F7D61 /* Validators.swift */,
 				5D2540FD2A3736C9007F4BE5 /* Extensions */,
 				5D286CA02A372BCC009EB8F4 /* Injection */,
-				5DB633A32A386D03001F7D61 /* Validators.swift */,
+				5D09A6E42A37732E00613819 /* Styles */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -474,6 +482,8 @@
 				5D09A6D22A375AA600613819 /* Font+Ext.swift in Sources */,
 				5DB633A82A3879A4001F7D61 /* MobileNumberView.swift in Sources */,
 				5D2541072A373EAF007F4BE5 /* Injected.swift in Sources */,
+				5D55A1E62A3899C1001F56B4 /* CountryPhoneCodes.swift in Sources */,
+				5D55A1E82A38A793001F56B4 /* Utilities.swift in Sources */,
 				5DB6339F2A3779F5001F7D61 /* PersonalInfoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +648,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-2co-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = 12co;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -684,6 +695,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-2co-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = 12co;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

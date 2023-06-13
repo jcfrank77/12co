@@ -39,7 +39,7 @@ struct AccountTypeView: View {
             NavigationLink(destination: PersonalInfoView().onAppear {
                 self.viewModel.setAccountType()
             }) {
-                Text("continue")
+                Text("Continue")
             }
             .buttonStyle(PrimaryButtonStyle())
             .padding(.top, Spacing.med)
