@@ -22,21 +22,21 @@ class PersonalInfoViewModel: ObservableObject {
     @Published var firstNameEdited: Bool = false
     @Published var lastNameEdited: Bool = false
 
-    fileprivate let dateFormatter: DateFormatter
+    fileprivate var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        return formatter
+    }
 
     var emailIsValid: Bool { EmailValidator(emailAddress.trimmed).isValid }
     var firstNameIsValid: Bool { NameValidator(firstName.trimmed).isValid }
     var lastNameIsValid: Bool { NameValidator(lastName.trimmed).isValid }
-    var infoIsValid: Bool { emailIsValid && firstNameIsValid && lastNameIsValid }
+    var dobIsValid: Bool { NameValidator(dateOfBirthString.trimmed).isValid }
+    var infoIsValid: Bool { emailIsValid && firstNameIsValid && lastNameIsValid && dobIsValid }
 
     var showEmailError: Bool { emailEdited && !emailIsValid }
     var showFirstNameError: Bool { firstNameEdited && !firstNameIsValid }
     var showLastNameEmailError: Bool { lastNameEdited && !lastNameIsValid }
-
-    init() {
-        self.dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMMM yyyy"
-    }
 
     func updateDobString() {
         dateOfBirthString = dateFormatter.string(from: dateOfBirth)

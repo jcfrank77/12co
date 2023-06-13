@@ -20,7 +20,7 @@ struct PersonalInfoView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Text("Personal Information")
+            Text("Personal information")
                 .font(.medHeavy)
                 .leftJustify()
 
@@ -86,6 +86,7 @@ struct PersonalInfoView: View {
                     .font(.med)
                     .leftJustify()
                     .padding(.top, Spacing.med)
+
                 Button {
                     self.viewModel.showDatePicker = true
                 } label: {
@@ -99,6 +100,7 @@ struct PersonalInfoView: View {
                 .padding(.top, Spacing.xSmall)
                 .popover(isPresented: $viewModel.showDatePicker) {
                     datePicker
+                        .presentationCompactAdaptation((.popover))
                 }
 
                 Divider()
@@ -132,7 +134,7 @@ struct PersonalInfoView: View {
             .onChange(of: viewModel.dateOfBirth, perform: { _ in
                 self.viewModel.updateDobString()
             })
-            .frame(width: 300, height: 300)
+            .frame(width: 300)
         }
     }
 
